@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>源點身&心靈工作坊 - Source Health & Wellness Workshop</title>
+    <meta name="description" content="探索源點身&心靈工作坊提供的多元課程，開啟您的身心靈成長之旅">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft JhengHei', 'PingFang TC', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.5rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #667eea;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Course Categories */
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .category-btn {
+            padding: 0.75rem 2rem;
+            background: white;
+            border: 2px solid #667eea;
+            color: #667eea;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .category-btn:hover, .category-btn.active {
+            background: #667eea;
+            color: white;
+        }
+
+        /* Courses Grid */
+        .courses-section {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #667eea;
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .course-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            display: flex;
+            align-items: center;
+            justify-center;
+            font-size: 3rem;
+        }
+
+        .course-content {
+            padding: 1.5rem;
+        }
+
+        .course-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: #ff6b9d;
+            color: white;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .course-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .course-price {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .price-original {
+            text-decoration: line-through;
+            color: #999;
+        }
+
+        .price-special {
+            font-size: 1.5rem;
+            color: #ff6b9d;
+            font-weight: bold;
+        }
+
+        .btn-learn-more {
+            width: 100%;
+            padding: 0.75rem;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-learn-more:hover {
+            background: #5568d3;
+        }
+
+        /* Footer */
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">源點身&心靈工作坊</div>
+            <ul class="nav-links">
+                <li><a href="/">首頁</a></li>
+                <li><a href="/courses">課程資訊</a></li>
+                <li><a href="/services">服務介紹</a></li>
+                <li><a href="/booking">立即預約</a></li>
+                <li><a href="/about">關於我們</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="/login" class="btn btn-primary">登入/註冊</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>🌟 探索內在的源點能量</h1>
+            <p>開啟您的身心靈成長之旅，與我們一起探索療癒、覺察與蛻變的力量</p>
+            <a href="/booking" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">立即預約課程</a>
+        </div>
+    </section>
+
+    <!-- Course Categories -->
+    <div class="categories">
+        <button class="category-btn active">全部課程</button>
+        <button class="category-btn">療癒課程</button>
+        <button class="category-btn">心靈課程</button>
+        <button class="category-btn">能量課程</button>
+        <button class="category-btn">藝術課程</button>
+    </div>
+
+    <!-- Courses Section -->
+    <section class="courses-section">
+        <h2 class="section-title">精選課程</h2>
+        <div class="courses-grid">
+            <!-- Course 1 -->
+            <div class="course-card">
+                <div class="course-image">🧘</div>
+                <div class="course-content">
+                    <span class="course-tag">熱烈預購中</span>
+                    <h3 class="course-title">心靈覺察與正念冥想</h3>
+                    <p style="color: #666; margin-bottom: 1rem;">透過正念練習，重新連結內在的平靜與智慧</p>
+                    <div class="course-price">
+                        <span class="price-original">定價 NT$ 6000</span>
+                        <span class="price-special">NT$ 3980</span>
+                    </div>
+                    <button class="btn-learn-more">了解更多</button>
+                </div>
+            </div>
+
+            <!-- Course 2 -->
+            <div class="course-card">
+                <div class="course-image">🌿</div>
+                <div class="course-content">
+                    <span class="course-tag">熱烈預購中</span>
+                    <h3 class="course-title">能量療癒工作坊</h3>
+                    <p style="color: #666; margin-bottom: 1rem;">學習運用能量平衡身心，啟動自我療癒力</p>
+                    <div class="course-price">
+                        <span class="price-original">定價 NT$ 800</span>
+                        <span class="price-special">NT$ 500</span>
+                    </div>
+                    <button class="btn-learn-more">了解更多</button>
+                </div>
+            </div>
+
+            <!-- Course 3 -->
+            <div class="course-card">
+                <div class="course-image">🎨</div>
+                <div class="course-content">
+                    <span class="course-tag">熱烈預購中</span>
+                    <h3 class="course-title">禪繞藝術創作</h3>
+                    <p style="color: #666; margin-bottom: 1rem;">以藝術為媒介，探索內在的創造力與療癒</p>
+                    <div class="course-price">
+                        <span class="price-original">定價 NT$ 1000</span>
+                        <span class="price-special">NT$ 588</span>
+                    </div>
+                    <button class="btn-learn-more">了解更多</button>
+                </div>
+            </div>
+
+            <!-- Course 4 -->
+            <div class="course-card">
+                <div class="course-image">🧘‍♀️</div>
+                <div class="course-content">
+                    <span class="course-tag">熱烈預購中</span>
+                    <h3 class="course-title">個案諮詢 - 小旺老師</h3>
+                    <p style="color: #666; margin-bottom: 1rem;">一對一深度個案諮詢，找到您的生命方向</p>
+                    <div class="course-price">
+                        <span class="price-original">30分鐘 NT$ 800</span>
+                        <span class="price-special">50分鐘 NT$ 1000</span>
+                    </div>
+                    <button class="btn-learn-more">了解更多</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 源點身&心靈工作坊 | Source Health & Wellness Workshop</p>
+        <p>聯絡我們：sourcehealth31@gmail.com</p>
+    </footer>
+
+    <script>
+        // Category filtering
+        const categoryBtns = document.querySelectorAll('.category-btn');
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                categoryBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                // Filter logic would go here
+                console.log('Filter by:', btn.textContent);
+            });
+        });
+
+        // Course card interactions
+        const learnMoreBtns = document.querySelectorAll('.btn-learn-more');
+        learnMoreBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                alert('課程詳情功能即將上線！');
+            });
+        });
+    </script>
+</body>
+</html>
